@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="conta.php">
-        digite um numero <input type="number" name="n1"><br>
-        <input type="submit" value="multiplicação">
+    <?php
+        $n1 = $_POST["n1"];
 
-    </form>
+        echo "<h1>A tabuada do numero $n1 é : </h1>";
+        for($i = 1; $i <=10 ; $i++) {
+            $resultado = $n1 * $i ;
+            echo "$n1 x $i = $resultado <br>"; 
+        }
+
+
+    ?>
+    
 </body>
 </html>
